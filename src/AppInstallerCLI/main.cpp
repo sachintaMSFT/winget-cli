@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 #include <AppInstallerCLICore.h>
 
+// Testing PR submission
 int wmain(int argc, wchar_t const** argv)
 {
     return AppInstaller::CLI::CoreMain(argc, argv);
