@@ -18,7 +18,7 @@ namespace AppInstaller
     }
 
     // The semantic meaning of the progress values.
-    enum class ProgressType
+    enum class ProgressType: uint32_t
     {
         // Progress will not be sent.
         None,
@@ -31,9 +31,16 @@ namespace AppInstaller
     // of cancel state.
     struct IProgressSink
     {
-        // Called as progress is made.
+        // Called as progress is made within the current execution stage.
         // If maximum is 0, the maximum is unknown.
         virtual void OnProgress(uint64_t current, uint64_t maximum, ProgressType type) = 0;
+
+        // Called as progress begins for the current execution stage.
+        virtual void BeginProgress() = 0;
+
+        // Called whenever progress ends for the current execution stage,
+        // even if it ends before the completion of current execution stage due to any reason.
+        virtual void EndProgress(bool hideProgressWhenDone) = 0;
     };
 
     // Callback interface given to the worker to report to.
@@ -55,6 +62,15 @@ namespace AppInstaller
         ProgressCallback() = default;
         ProgressCallback(IProgressSink* sink) : m_sink(sink) {}
 
+        void BeginProgress() override 
+        {
+            IProgressSink* sink = GetSink();
+            if (sink)
+            {
+                sink->BeginProgress();
+            }
+        };
+
         void OnProgress(uint64_t current, uint64_t maximum, ProgressType type) override
         {
             IProgressSink* sink = GetSink();
@@ -63,6 +79,15 @@ namespace AppInstaller
                 sink->OnProgress(current, maximum, type);
             }
         }
+
+        void EndProgress(bool hideProgressWhenDone) override
+        {
+            IProgressSink* sink = GetSink();
+            if (sink)
+            {
+                sink->EndProgress(hideProgressWhenDone);
+            }
+        };
 
         bool IsCancelled() override
         {

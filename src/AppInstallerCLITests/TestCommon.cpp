@@ -139,6 +139,15 @@ namespace TestCommon
         }
     }
 
+    void TestProgress::BeginProgress()
+    {
+    }
+
+    void TestProgress::EndProgress(bool hideProgressWhenDone)
+    {
+        _Unreferenced_parameter_(hideProgressWhenDone);
+    }
+
     bool TestProgress::IsCancelled()
     {
         return false;
