@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <PropertyGroup Label="Globals">
+    <CppWinRTOptimized>true</CppWinRTOptimized>
+    <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
+    <MinimalCoreWin>true</MinimalCoreWin>
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5eb88068-5fb9-4e69-89b2-72dbc5e068f9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AppInstallerRepositoryCore</RootNamespace>
+    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)x86\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)x86\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalOptions>%(AdditionalOptions) /permissive- /bigobj /D _SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;_DEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;WIN32;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_NO_ASYNCRTIMP;NDEBUG;%(PreprocessorDefinitions);CLICOREDLLBUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);$(ProjectDir)\Public;$(ProjectDir)..\AppInstallerCommonCore\Public;$(ProjectDir)..\JsonCppLib\json;$(ProjectDir)..\cpprestsdk\cpprestsdk\Release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</TreatWarningAsError>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CompositeSource.h" />
+    <ClInclude Include="ICU\SQLiteICU.h" />
+    <ClInclude Include="Microsoft\ARPHelper.h" />
+    <ClInclude Include="Microsoft\PredefinedInstalledSourceFactory.h" />
+    <ClInclude Include="Microsoft\PreIndexedPackageSourceFactory.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\ChannelTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\CommandsTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\IdTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\Interface.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\ManifestTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\MonikerTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\NameTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\OneToManyTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\OneToOneTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\PathPartTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\SearchResultsTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\TagsTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_0\VersionTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_1\Interface.h" />
+    <ClInclude Include="Microsoft\Schema\1_1\ManifestMetadataTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_1\PackageFamilyNameTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_1\ProductCodeTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_1\SearchResultsTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_2\Interface.h" />
+    <ClInclude Include="Microsoft\Schema\1_2\NormalizedPackageNameTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_2\NormalizedPackagePublisherTable.h" />
+    <ClInclude Include="Microsoft\Schema\1_2\SearchResultsTable.h" />
+    <ClInclude Include="Microsoft\Schema\ISQLiteIndex.h" />
+    <ClInclude Include="Microsoft\Schema\MetadataTable.h" />
+    <ClInclude Include="Microsoft\Schema\Version.h" />
+    <ClInclude Include="Microsoft\SQLiteIndex.h" />
+    <ClInclude Include="Microsoft\SQLiteIndexSource.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Rest\HttpClientHelper.h" />
+    <ClInclude Include="Rest\RestClient.h" />
+    <ClInclude Include="Rest\RestSource.h" />
+    <ClInclude Include="Rest\RestSourceFactory.h" />
+    <ClInclude Include="Rest\Schema\1_0\Interface.h" />
+    <ClInclude Include="Rest\Schema\IRestClient.h" />
+    <ClInclude Include="Rest\Schema\Json\CommonRestConstants.h" />
+    <ClInclude Include="Rest\Schema\Json\InformationResponseDeserializer.h" />
+    <ClInclude Include="Rest\Schema\Json\JsonHelper.h" />
+    <ClInclude Include="Rest\Schema\Json\ManifestDeserializer.h" />
+    <ClInclude Include="Rest\Schema\Json\SearchResponseDeserializer.h" />
+    <ClInclude Include="Rest\Schema\RestHelper.h" />
+    <ClInclude Include="SourceFactory.h" />
+    <ClInclude Include="SQLiteStatementBuilder.h" />
+    <ClInclude Include="Public\AppInstallerRepositorySearch.h" />
+    <ClInclude Include="Public\AppInstallerRepositorySource.h" />
+    <ClInclude Include="SQLiteTempTable.h" />
+    <ClInclude Include="SQLiteWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CompositeSource.cpp" />
+    <ClCompile Include="ICU\SQLiteICU.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Microsoft\ARPHelper.cpp" />
+    <ClCompile Include="Microsoft\PredefinedInstalledSourceFactory.cpp" />
+    <ClCompile Include="Microsoft\PreIndexedPackageSourceFactory.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\Interface_1_0.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\ManifestTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\OneToManyTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\OneToOneTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\PathPartTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_0\SearchResultsTable_1_0.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_1\Interface_1_1.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_1\ManifestMetadataTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_1\SearchResultsTable_1_1.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_2\Interface_1_2.cpp" />
+    <ClCompile Include="Microsoft\Schema\1_2\SearchResultsTable_1_2.cpp" />
+    <ClCompile Include="Microsoft\Schema\MetadataTable.cpp" />
+    <ClCompile Include="Microsoft\Schema\Version.cpp" />
+    <ClCompile Include="Microsoft\SQLiteIndex.cpp" />
+    <ClCompile Include="Microsoft\SQLiteIndexSource.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RepositorySource.cpp" />
+    <ClCompile Include="Rest\HttpClientHelper.cpp" />
+    <ClCompile Include="Rest\RestClient.cpp" />
+    <ClCompile Include="Rest\RestSource.cpp" />
+    <ClCompile Include="Rest\RestSourceFactory.cpp" />
+    <ClCompile Include="Rest\Schema\1_0\Interface.cpp" />
+    <ClCompile Include="Rest\Schema\Json\InformationResponseDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\Json\JsonHelper.cpp" />
+    <ClCompile Include="Rest\Schema\Json\ManifestDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\Json\SearchResponseDeserializer.cpp" />
+    <ClCompile Include="Rest\Schema\RestHelper.cpp" />
+    <ClCompile Include="SQLiteStatementBuilder.cpp" />
+    <ClCompile Include="SQLiteTempTable.cpp" />
+    <ClCompile Include="SQLiteWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft\README.md" />
+    <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.targets')" />
+    <Import Project="$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.200519.2\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.200519.2\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200729.8\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.200519.2\build\native\Microsoft.Windows.ImplementationLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.200519.2\build\native\Microsoft.Windows.ImplementationLibrary.targets'))" />
+  </Target>
+</Project>

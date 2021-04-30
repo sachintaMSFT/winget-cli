@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Telemetry - Do Not Modify">
+      <UniqueIdentifier>{552a58eb-8d07-41b2-87b5-3e71b9fb3cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public">
+      <UniqueIdentifier>{5cdf3fa3-e657-4d84-81bb-f740aa476143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpStream">
+      <UniqueIdentifier>{a9c14af9-ca74-4945-a19c-9e99df23a5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public\winget">
+      <UniqueIdentifier>{41035fd6-dc74-4464-b9b1-4ffe95d6789c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manifest">
+      <UniqueIdentifier>{9b8e2682-3eb7-4530-bc9a-a57fafc44177}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Telemetry\MicrosoftTelemetry.h">
+      <Filter>Telemetry - Do Not Modify</Filter>
+    </ClInclude>
+    <ClInclude Include="Telemetry\TraceLogging.h">
+      <Filter>Telemetry - Do Not Modify</Filter>
+    </ClInclude>
+    <ClInclude Include="Telemetry\WinEventLogLevels.h">
+      <Filter>Telemetry - Do Not Modify</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerTelemetry.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerLogging.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerStrings.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerRuntime.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerSHA256.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerDownloader.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerArchitecture.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerErrors.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerLanguageUtilities.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpStream\HttpClientWrapper.h">
+      <Filter>HttpStream</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpStream\HttpLocalCache.h">
+      <Filter>HttpStream</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpStream\HttpRandomAccessStream.h">
+      <Filter>HttpStream</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerMsixInfo.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerFileLogger.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerDateTime.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerSynchronization.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerDeployment.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerProgress.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\AppInstallerVersions.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ExtensionCatalog.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\LocIndependent.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\Settings.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\UserSettings.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ExperimentalFeature.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="YamlWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\Yaml.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestInstaller.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestLocalization.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestValidation.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestYamlParser.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\Registry.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\NameNormalization.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\Regex.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestSchemaValidation.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\Manifest.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestYamlPopulator.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\ManifestCommon.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\winget\JsonSchemaValidation.h">
+      <Filter>Public\winget</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Telemetry\TraceLogging.cpp">
+      <Filter>Telemetry - Do Not Modify</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInstallerTelemetry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInstallerLogging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInstallerStrings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Runtime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SHA256.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Downloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Architecture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpStream\HttpClientWrapper.cpp">
+      <Filter>HttpStream</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpStream\HttpLocalCache.cpp">
+      <Filter>HttpStream</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpStream\HttpRandomAccessStream.cpp">
+      <Filter>HttpStream</Filter>
+    </ClCompile>
+    <ClCompile Include="MsixInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Synchronization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Versions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Errors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtensionCatalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExperimentalFeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YamlWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Yaml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\ManifestValidation.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\YamlParser.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="Registry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NameNormalization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\ManifestSchemaValidation.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\ManifestCommon.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\ManifestYamlPopulator.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest\Manifest.cpp">
+      <Filter>Manifest</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonSchemaValidation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PropertySheet.props" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
